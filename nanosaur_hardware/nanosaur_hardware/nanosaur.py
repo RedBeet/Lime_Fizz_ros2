@@ -16,7 +16,7 @@ from .motor import Motor
 class NanoSaur(Node):
 
     def __init__(self):
-        super().__init__('lime_fizzio')
+        super().__init__('lime_fizz')
         
         self.timer_period = 1. / 5
         self.get_logger().debug(f"timer {self.timer_period}")
@@ -44,7 +44,7 @@ class NanoSaur(Node):
             10
         )
         # Node started
-        self.get_logger().info("Hello Lime Fizzio!")
+        self.get_logger().info("Hello Lime Fizz!")
 
         self.radius = 0.01
         self.wheel_separation = 0.03

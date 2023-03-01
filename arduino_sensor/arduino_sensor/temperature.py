@@ -11,5 +11,5 @@ class ArduinoTemperature:
     def getTemperature(self):
         if py_serial.readable():
             
-            temp = float(py_serial.readline())
+            temp = float(py_serial.readline().decode)
             return temp

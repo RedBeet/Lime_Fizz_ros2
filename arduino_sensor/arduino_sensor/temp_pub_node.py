@@ -18,9 +18,7 @@ class tempPublisher(Node):
 
     def publish_callback(self):
         temp_msg = Temperature()
-        temp_msg.header.stamp = self.get_clock().now().to_msg().sec
         temp_msg.temperature = self.ardTemp.getTemperature()
-        temp_msg.varience = 0
         self.publisher.publish(temp_msg)
     
 def main(args=None):
